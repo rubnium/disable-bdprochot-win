@@ -17,14 +17,16 @@ La manera más fácil y común es usando el programa [ThrottleStop](https://www.
 ## Mi solución
 Mi solución trata de modificar un registro del procesador para que no tenga en cuenta el BDPROCHOT, y todo se hará desde el CMD de Windows. Consta de 3 partes: preparativos, tener un script y programar la ejecución. La gracia de esta solución, es que en vez de ejecutar un programa entero y tenerlo ejecutado en el fondo, solo llamas a varias lineas de CMD en un momento (es más eficiente).
 ### 1. Preparativos
+Esta solución se basa en otra herramienta, [*msr-utility* de cocafe](https://github.com/cocafe/msr-utility/releases/latest). Descárgala y descomprímela en un sitio seguro.  
+En mi caso, y en los siguientes ejemplos mostrados, está en `C:\msr-cmd`
 ### 2. Tener un script
-**ELEGIR UNO DE LOS SIGUIENTES APARTADOS** Es mucho más seguro el primero
+El script será la clave de la solución, ya que será lo que desactive el BDPROCHOT. Éste escribirá en el registro 0x1FC el valor adecuado. Para ello primero habrá que prepararlo, y ofrezco dos alternativas, **ELIGE UNO DE LOS SIGUIENTES APARTADOS** (es mucho más seguro el primero)
 ### 2.a Usar un script manual
 [*Ir al paso 3*](#3-programar-la-ejecución)
 ### 2.b Usar un script automático
 
 ### 3. Programar la ejecución
-<!--<h3 id="MiSolucion3">3. Programar la ejecución</h3>-->
+
 
 ## Créditos y agradecimientos
 - cocafe por su herramienta para escribir en los registros: https://github.com/cocafe/msr-utility
